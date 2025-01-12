@@ -12,10 +12,29 @@ module.exports = {
 };
 const products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
-function logFirstProduct(array) {
-  return array[0];
+// logFirstProduct
+function logFirstProduct(products) {
+  console.log(products [0]);
 }
-console.log(logFirstProduct(products));
-// function addProduct();
-// function updateProductName();
-// function removeLastProduct();
+logFirstProduct(products)
+
+// addProduct
+function addProduct(array, productName) {
+  array.push(productName); // adds product to the array 
+  console.log(array)
+}
+addProduct(products, "Mouse")
+
+// updateProductName
+function updateProductName (array, position,reName) {
+  array[position] = reName
+  console.log( "Update Product Name: ", reName)
+}
+updateProductName(products, 2, "InEar Headphones")
+
+// removeLastProduct
+function removeLastProduct(array) {
+  array.pop();
+  console.log(array)
+}
+removeLastProduct(products)
